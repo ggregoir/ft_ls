@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ls.c                                            :+:      :+:    :+:   */
+/*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ggregoir <ggregoir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/04 20:49:39 by ggregoir          #+#    #+#             */
-/*   Updated: 2018/02/28 21:29:28 by ggregoir         ###   ########.fr       */
+/*   Created: 2018/02/28 21:20:18 by ggregoir          #+#    #+#             */
+/*   Updated: 2018/02/28 21:21:14 by ggregoir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_ls.h"
 
-int			main(int argc, char **argv)
+void	patherror(char *path)
 {
-	t_flags f;
-
-	if (argc > 1)
-		handle_flags(&f, argv, argc);
-	else
-		noflags(".", &f);
-	return 0;
+	write(2, "ft_ls: ", 7);
+	ft_putstr_fd(path, 2);
+	write(2, ": No such file or directory\n", 28);
+	exit(1);
 }
