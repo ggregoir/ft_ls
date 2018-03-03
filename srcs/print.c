@@ -6,7 +6,7 @@
 /*   By: ggregoir <ggregoir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 19:20:51 by ggregoir          #+#    #+#             */
-/*   Updated: 2018/02/28 21:33:35 by ggregoir         ###   ########.fr       */
+/*   Updated: 2018/02/28 23:45:39 by ggregoir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void		printres(t_order *ord, t_flags *f)
 	{
 		ft_putstr(ord->name);
 		ord = ord->next;
-		if (f->flags[LINE] == 1)
+		if (f->flags[LINE] == 1 && ord->name[0] != 0)
 			write(1, "\n", 1);
 		else if (ord->name[0] != 0)
 			write(1, "	", 1);

@@ -6,7 +6,7 @@
 /*   By: ggregoir <ggregoir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/04 20:50:15 by ggregoir          #+#    #+#             */
-/*   Updated: 2018/02/28 21:46:56 by ggregoir         ###   ########.fr       */
+/*   Updated: 2018/03/02 15:02:12 by ggregoir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef FT_LS_H
@@ -14,6 +14,7 @@
 
 # include <dirent.h>
 # include "libft/includes/libft.h"
+# include <sys/stat.h>
 
 # define	REC		0
 # define	DOT		1
